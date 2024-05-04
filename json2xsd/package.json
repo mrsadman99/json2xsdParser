@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "generate-schema": "^2.6.0",
+    "quicktype-core": "^23.0.116"
+  }
+}

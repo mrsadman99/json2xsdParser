@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:x="http://example.com/myschema.xsd" elementFormDefault="qualified"
+    targetNamespace="http://example.com/myschema.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+    <complexType name="array">
+        <sequence>
+            <element name="persons">
+                <complexType>
+                    <sequence>
+                        <element maxOccurs="unbounded" minOccurs="0" name="Person" type="x:Person" />
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="Person">
+        <sequence>
+            <element name="name" type="string" />
+            <element name="surname" type="string" />
+            <element name="age" type="int" />
+            <element name="phone" type="string" />
+            <element name="status" type="x:Status" />
+            <element name="address" type="x:Address" />
+            <element minOccurs="0" name="driver" type="boolean" />
+        </sequence>
+    </complexType>
+    <complexType name="Address">
+        <sequence>
+            <element name="street" type="string" />
+            <element name="city" type="string" />
+            <element name="state" type="string" />
+            <element name="postalCode" type="string" />
+        </sequence>
+    </complexType>
+    <complexType name="Status">
+        <sequence>
+            <element name="activity" type="string" />
+            <element name="organizationName" type="string" />
+            <element name="address" type="x:Address" />
+        </sequence>
+    </complexType>
+</schema>
